@@ -1,7 +1,7 @@
 import subprocess
 import boto3
 
-output = subprocess.check_output('df -h | grep /dev/nvme | awk \'{print  $5}\'', shell=True)
+output = subprocess.check_output('df -h | grep /dev/nvme | awk \'{print $5}\'', shell=True)
 metric = float(output.decode('utf-8').strip().strip('%'))/100
 print (metric)
 
