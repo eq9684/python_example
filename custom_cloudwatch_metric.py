@@ -22,6 +22,16 @@ response = client.put_metric_data(
                 }
             ],
             'Value': metric
+        },
+        {
+            'MetricName': 'MemFree',
+            'Dimensions':[
+                {
+                    'Name': hostname,
+                    'Value': 'MemFree'
+                }
+            ],
+            'Value': memfree
         }
     ]
 )
